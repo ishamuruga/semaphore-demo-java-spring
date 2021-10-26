@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.example.springpipelinedemo.service.UserService;
 
-@SpringBootApplication123
+@SpringBootApplication
 public class SpringPipelineDemoApplication {
 	//@Autowired
 	//private UserService userService;
