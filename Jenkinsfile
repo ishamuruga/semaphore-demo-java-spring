@@ -1,4 +1,4 @@
-def server = Artifactory.server 'MyArtifactory'
+//def server = Artifactory.server 'MyArtifactory'
 
 def rtMaven = Artifactory.newMavenBuild()
 
@@ -18,19 +18,19 @@ pipeline {
 				git url: 'https://github.com/ishamuruga/semaphore-demo-java-spring'
 			}
 		}
-		stage('Artifactory configuration'){
-			steps{
-				script{
-					rtMaven.tool = 'Maven-3.5.3'
-					rtMaven.deployer releaseRepo: 'libs-release-local',snapshotRepo: 'libs-snapshot-local', server:server
-					rtMaven.resolver releaseRepo: 'libs-release',snapshotRepo: 'libs-snapshot', server:server
-					rtMaven.deployer.artifactDeploymentPatterns.addExclude("pom.xml")
-					buildInfo = Artifactory.newBuildInfo()
-					buildInfo.retention maxBuilds: 10, maxDays: 7,deleteBuildArtifacts:true
-					buildInfo.env.capture = true
-				}
-			}
-		}
+		//stage('Artifactory configuration'){
+		//	steps{
+		//		script{
+		//			rtMaven.tool = 'Maven-3.5.3'
+		//			rtMaven.deployer releaseRepo: 'libs-release-local',snapshotRepo: 'libs-snapshot-local', server:server
+		//			rtMaven.resolver releaseRepo: 'libs-release',snapshotRepo: 'libs-snapshot', server:server
+		//			rtMaven.deployer.artifactDeploymentPatterns.addExclude("pom.xml")
+		//			buildInfo = Artifactory.newBuildInfo()
+		//			buildInfo.retention maxBuilds: 10, maxDays: 7,deleteBuildArtifacts:true
+		//			buildInfo.env.capture = true
+		//		}
+		//	}
+		//}
 		stage('Execute Maven'){
 			steps{
 				script{
