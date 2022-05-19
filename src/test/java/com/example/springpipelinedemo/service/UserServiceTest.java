@@ -41,7 +41,7 @@ public class UserServiceTest {
 
     @Test
     public void findByName() {
-        String name = "name";
+        String name = "name123";
 
         User user = mock(User.class);
         doReturn(Optional.of(user)).when(userRepository).findByEmail(name);
@@ -64,7 +64,7 @@ public class UserServiceTest {
     
     @Test
     public void findByResult() {
-       assertEquals("Test123","Test123");
+       assertEquals("Test1234","Test123");
     }
 
     @Test
