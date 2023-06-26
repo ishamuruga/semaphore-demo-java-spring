@@ -66,7 +66,7 @@ node {
 	}
 	stage('SonarQube analysis') {
 		withSonarQubeEnv('SonarQube6.3') {
-			sh 'mvn clean package sonar:sonar'
+			sh 'mvn clean package sonar:sonar -Dsonar.login=admin -Dsonar.password=admin'
 		} // submitted SonarQube taskId is automatically attached to the pipeline context
 	}
 	stage('Publish build info'){
