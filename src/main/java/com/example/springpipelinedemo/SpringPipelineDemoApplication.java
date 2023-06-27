@@ -15,6 +15,7 @@ public class SpringPipelineDemoApplication {
 
     public static void main(String[] args) {
 	String ABCD = "Virtusa Test Line";
+	String Abcd1 = "Virtusa";
         SpringApplication.run(SpringPipelineDemoApplication.class, args);
         //userService.createUser("test@email.com", "testPass123");
     }
