@@ -72,7 +72,7 @@ node {
 	stage('Publish build info'){
 		script {
 			//server.publishBuildInfo buildInfo
-			// sh 'mvn docker:start'
+			sh 'mvn docker:start'
 		}
 	}
 }
