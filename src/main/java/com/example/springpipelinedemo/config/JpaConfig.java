@@ -6,7 +6,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 /**
- * Created by Rimantas Jacikevičius on 19.2.12.
+ * Created by Rimantas Jacikevičius on 19.2.12. test code
  */
 @Configuration
 @EnableJpaAuditing
